@@ -13,28 +13,59 @@ body {
 }
 
 .header{
+  background: linear-gradient(
+    to right, 
+    #c8beff 0%, 
+    #dea8f8 10%, 
+    #a8deff 30%,
+    #bdfacd 42%, 
+    #f3fabd 58%, 
+    #fae3db 70%, 
+    #f8acab 95%, 
+    #feaad4 100%
+  );
 }
 
 .header__container{
+  overflow: hidden;
   position: relative;
   max-width: 1200px;
+  height: 600px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .nav-menu{
   position: absolute;
-  top: 50px;
+  top: 60px;
   right: 15px;
   width: 200px;
   height: 230px;
+  transform: scale(1, 0);
+  transform-origin: top;
+  opacity: 0;
+  transition: transform ease-in .3s;
   box-shadow: 0 0 10px rgba(0,0,0, .2);
-  border-radius: 5px;
+  background-color: #fff;
+}
+
+.nav-menu-active{
+  transform: scale(1, 1);
+  opacity: 1;
+}
+
+.nav-menu-active a{
+  opacity: 1;
+  transition: opacity ease 1s;
 }
 
 .hamburger{
   position: absolute;
   right: 0;
+}
+
+.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before, .hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::after{
+  background-color: #2D4EA2
 }
 
 .nav-menu__ul{
@@ -46,6 +77,33 @@ body {
 }
 
 .nav-menu__link{
-  color: #684DB0;
+  opacity: 0;
+  color: #2D4EA2;
   text-decoration: none;
+}
+
+.nav-menu__link:active{
+  text-decoration: underline;
+}
+
+.header__title{
+  margin-top: 250px;
+  text-align: center;
+  font-size: 3.6rem;
+  font-family: 'Vujahday Script', cursive;
+  color: #298d07;
+}
+
+@media screen and (min-width: 768px){
+.header__title{
+  margin-top: 220px;
+  font-size: 6rem;
+}
+}
+
+@media screen and (min-width: 1440px){
+.header__title{
+  margin-top: 200px;
+  font-size: 10rem;
+}
 }
