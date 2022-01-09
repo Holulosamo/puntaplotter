@@ -1,8 +1,77 @@
 import './style.css';
 
-const navBtn = document.querySelector('.hamburger'),
-  navMenu = document.querySelector('.nav-menu'),
-  navLink = document.querySelectorAll('.nav-menu__link');
+const navBtn = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+const navLink = document.querySelectorAll('.nav-menu__link');
+const track  = document.querySelector('.carousel__tracker');
+const slides = Array.from(track.children);
+const nextBtn = document.querySelector('.right--arrow');
+const prevBtn = document.querySelector('.left--arrow');
+
+
+const slideWidth = slides[0].getBoundingClientRect().width;
+
+console.log(slideWidth)
+
+const setSlidePostion = (slide, index) => {
+  slide.style.left = `${slideWidth * index}px`;
+}
+
+slides.forEach(setSlidePostion);
+
+const moveToSlide = (track, currentSlide, targetSlide) => {
+  track.style.transform = `translateX(-${targetSlide.style.left})`;
+  currentSlide.classList.remove("current-slide");
+  targetSlide.classList.add("current-slide");
+}
+
+const nextSlide = () => {
+    setInterval(() => {
+        const currentSlide = track.querySelector(".current-slide");
+    let nextSlide = currentSlide.nextElementSibling;
+
+    if(nextSlide.nextElementSibling !== null){
+      moveToSlide(track, currentSlide, nextSlide);
+    }
+    else{
+      const sliderFirst = track.querySelectorAll(".carousel__slide")[0];
+      track.insertAdjacentElement("beforeend", sliderFirst);
+      moveToSlide(track, currentSlide, nextSlide);
+    }
+    }, 10000);
+};
+
+document.addEventListener("DOMContentLoaded", (e) => {
+  nextSlide();
+}); 
+
+nextBtn.addEventListener('click', e => {
+    const currentSlide = track.querySelector(".current-slide");
+    let nextSlide = currentSlide.nextElementSibling;
+
+    if(nextSlide.nextElementSibling !== null){
+      moveToSlide(track, currentSlide, nextSlide);
+    }
+    else{
+      const sliderFirst = track.querySelectorAll(".carousel__slide")[0];
+      track.insertAdjacentElement("beforeend", sliderFirst);
+      moveToSlide(track, currentSlide, nextSlide);
+    }
+
+  console.log(slides[0]);
+
+});
+
+prevBtn.addEventListener("click", (e) => {
+    const currentSlide = track.querySelector(".current-slide");
+    const sliders = track.querySelectorAll(".carousel__slide");
+    const sliderLast = sliders[sliders.length - 1]
+    track.insertAdjacentElement("afterbegin", sliderLast);
+    let prevSlide = currentSlide.previousElementSibling;
+    moveToSlide(track, currentSlide, prevSlide);
+});
+
+//nav menu functionallity
 
 navBtn.addEventListener('click', () =>{
   navBtn.classList.contains("is-active")
@@ -22,4 +91,6 @@ navLink.forEach(navLink => {
       navBtn.classList.remove("is-active");
     }
   });
-})
+});
+
+
