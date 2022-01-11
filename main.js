@@ -5,13 +5,12 @@ const navMenu = document.querySelector('.nav-menu');
 const navLink = document.querySelectorAll('.nav-menu__link');
 const track  = document.querySelector('.carousel__tracker');
 const slides = Array.from(track.children);
-const nextBtn = document.querySelector('.right--arrow');
-const prevBtn = document.querySelector('.left--arrow');
-
+const nextBtn = document.querySelector('.carousel__buttons--right');
+const prevBtn = document.querySelector('.carousel__buttons--left');
+const carouselContainer = document.querySelector('.designs');
 
 const slideWidth = slides[0].getBoundingClientRect().width;
-
-console.log(slideWidth)
+carouselContainer.style.background = `linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url(${slides[0].children[0].attributes.src.value}) no-repeat center/cover`;
 
 const setSlidePostion = (slide, index) => {
   slide.style.left = `${slideWidth * index}px`;
@@ -23,11 +22,12 @@ const moveToSlide = (track, currentSlide, targetSlide) => {
   track.style.transform = `translateX(-${targetSlide.style.left})`;
   currentSlide.classList.remove("current-slide");
   targetSlide.classList.add("current-slide");
+  carouselContainer.style.background = `linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url(${targetSlide.querySelector('img').src}) no-repeat center/cover`;
 }
 
 const nextSlide = () => {
     setInterval(() => {
-        const currentSlide = track.querySelector(".current-slide");
+    const currentSlide = track.querySelector(".current-slide");
     let nextSlide = currentSlide.nextElementSibling;
 
     if(nextSlide.nextElementSibling !== null){
@@ -57,9 +57,6 @@ nextBtn.addEventListener('click', e => {
       track.insertAdjacentElement("beforeend", sliderFirst);
       moveToSlide(track, currentSlide, nextSlide);
     }
-
-  console.log(slides[0]);
-
 });
 
 prevBtn.addEventListener("click", (e) => {

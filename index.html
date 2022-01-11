@@ -21,9 +21,9 @@
         </button>
         <nav class="nav-menu">
           <ul class="nav-menu__ul  no-bullet">
-            <li class="nav-menu__li"><a href="#" class="nav-menu__link">Diseños</a></li>
-            <li class="nav-menu__li"><a href="#" class="nav-menu__link">Acerca de nosotros</a></li>
-            <li class="nav-menu__li"><a href="#" class="nav-menu__link">Contactanos</a></li>
+            <li class="nav-menu__li"><a href="#about" class="nav-menu__link">Acerca de nosotros</a></li>
+            <li class="nav-menu__li"><a href="#designs" class="nav-menu__link">Nuestros diseños</a></li>
+            <li class="nav-menu__li"><a href="#footer" class="nav-menu__link">Contactanos</a></li>
           </ul>
         </nav>
         <h1 class="header__title">Punta Plotter</h1>
@@ -31,43 +31,67 @@
     </header>
 
     <main class="main">
-      <section class="aboout">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque officia at, repudiandae voluptatum perspiciatis explicabo magni hic quod aliquid unde, placeat exercitationem. Itaque dolorum officia error quae minus, autem eaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit assumenda vero voluptas ad ab explicabo doloremque ratione? Unde, exercitationem, error sapiente quia, tempore nesciunt necessitatibus nobis vero vel totam corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur consequuntur quas cumque, repellendus eligendi doloribus architecto dolorum maxime. Inventore, mollitia repudiandae eligendi enim facilis tempora aspernatur adipisci modi rerum molestias.</p>
+      <section id="about" class="about">
+        <article class="about__article">
+          <h2 class="about__title">¿Quienes somos?</h2>
+          <p class="about__text">Somos una empresa familiar, nuestro local se encuentra en Punta Alta. Realizamos Ploteos en vidrieras paredes, también Textiles y vehiculares, Carteleria. Corporeo en Polifan para locales y trabajos DecoHome.</p>
+          <p class="about__text">
+            Aquí abajo podran ver algunos de nuestros trabajos realizados:
+          </p>
+        </article>
       </section>
 
 
-      <section class="designs">
+      <section id="designs" class="designs">
         <article class="carousel">
             <div class="carousel__track-container">
               <ul class="carousel__tracker  no-bullet">
                 <li class="carousel__slide  current-slide">
-                  <img class="carousel__imgs" src="https://www.placeimg.com/1920/1080/arch" alt="">
+                  <img class="carousel__imgs" src="assets/268282400_281158763976448_5546838600181652458_n.jpg" alt="design">
                 </li>
                 <li class="carousel__slide">
-                  <img class="carousel__imgs" src="https://www.placeimg.com/1920/1080/nature" alt="">
+                  <img class="carousel__imgs" src="assets/254647395_261116145980710_630920895673473955_n.jpg" alt="design">
                 </li>
                 <li class="carousel__slide">
-                  <img class="carousel__imgs" src="https://www.placeimg.com/1920/1080/people" alt="">
+                  <img class="carousel__imgs" src="assets/254655972_261116019314056_7836497282765668924_n.jpg" alt="design">
                 </li>
                 <li class="carousel__slide">
-                  <img class="carousel__imgs" src="https://www.placeimg.com/1920/1080/tech" alt="">
+                  <img class="carousel__imgs" src="assets/255127193_261115302647461_2321039887718069931_n.jpg" alt="design">
                 </li>
                 <li class="carousel__slide">
-                  <img class="carousel__imgs" src="https://www.placeimg.com/1920/1080/animals" alt="">
+                  <img class="carousel__imgs" src="assets/268095480_281157690643222_2434736837278321396_n.jpg" alt="design">
                 </li>
               </ul>
             </div>
 
           
-            <button class="carousel__buttons right--arrow">
+            <button class="carousel__buttons carousel__buttons--right">
               <i class="fas fa-chevron-right"></i>
             </button>
-            <button class="carousel__buttons left--arrow">
+            <button class="carousel__buttons carousel__buttons--left">
               <i class="fas fa-chevron-left"></i>
             </button>
         </article>
       </section>
     </main>
+
+    <footer id="footer" class="footer">
+      <nav class="nav-footer">
+        <ul class="nav-footer__ul no-bullet">
+          <li class="nav-footer__list"><a href="" class="nav-footer__links">Inicio</a></li>
+          <li class="nav-footer__list"><a href="" class="nav-footer__links">Acerca de Nosotros</a></li>
+          <li class="nav-footer__list"><a href="" class="nav-footer__links">Diseños</a></li>
+        </ul>
+      </nav>
+
+      <section class="contact">
+        <h2 class="contact__title">Contactanos</h2>
+        <ul class="no-bullet">
+          <li><a href="https://www.instagram.com/puntaplotter/?hl=es-la" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://www.facebook.com/Puntaploter/?ref=page_internal" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a></li>
+        </ul>
+      </section>
+    </footer>
 
     <script type="module" src="/main.js"></script>
   </body>
