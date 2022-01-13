@@ -80,7 +80,7 @@ img{
 
 .nav-menu__link{
   opacity: 0;
-  color: #2D4EA2;
+  color: #3c6de9;
   text-decoration: none;
 }
 
@@ -155,7 +155,7 @@ img{
 
 .about{
   text-align: center;
-  padding: 10em 2em;
+  padding: 5em 2em;
 }
 
 .about__article{
@@ -278,16 +278,6 @@ img{
 }
 }
 
-@media screen and (hover:hover){
-  .carousel__buttons:hover{
-    background-color: rgba(141, 140, 140, .3)
-  }
-  .nav-menu__link:hover{
-    text-decoration: underline;
-    color: rgb(233, 67, 67);
-  }
-}
-
 .footer{
   display: grid;
   grid-template-columns: repeat( auto-fit, minmax(250px, 1fr));
@@ -305,8 +295,27 @@ img{
   margin-bottom: 2em;
 }
 
+.nav-footer{
+  align-self: center;
+}
+
 .nav-footer__list{
   line-height: 50px;
+}
+
+.nav-footer__links{
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #3c6de9;
+}
+
+.nav-footer__links, .footer-contact__links{
+  cursor: pointer;
+}
+
+.nav-footer__links:active{
+  text-decoration: underline;
 }
 
 .footer-contact__title{
@@ -331,4 +340,25 @@ img{
 
 .footer-contact__facebook{
   color: #2D4EA2;
+}
+
+@media screen and (min-width: 1440px){
+  .nav-footer__ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+  }
+}
+
+@media screen and (hover:hover){
+  .carousel__buttons:hover{
+    background-color: rgba(141, 140, 140, .3)
+  }
+  .nav-menu__link:hover{
+    text-decoration: underline;
+    color: rgb(233, 67, 67);
+  }
+  .nav-footer__links:hover{
+    text-decoration: underline;
+  }
 }
