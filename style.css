@@ -27,7 +27,7 @@ img{
 }
 
 .header{
-  background: url(/photo-1557682268-e3955ed5d83f.jpg) no-repeat center/cover;
+  background: url(images/photo-1557682268-e3955ed5d83f.jpg) no-repeat center/cover;
   border-bottom-left-radius: 10em;
 }
 
@@ -46,6 +46,7 @@ img{
   right: 15px;
   width: 200px;
   height: 230px;
+  z-index: 999;
   transform: scale(1, 0);
   transform-origin: top;
   opacity: 0;
