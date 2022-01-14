@@ -27,8 +27,7 @@ img{
 }
 
 .header{
-  background: url(images/photo-1557682268-e3955ed5d83f.jpg) no-repeat center/cover;
-  border-bottom-left-radius: 10em;
+  background: linear-gradient(10deg, #fff 25%, rgb(22,111,255) 20%, rgb(39,6,207) 45%, rgb(3,19,237) 65%, rgb(7,70,183) 80%, rgb(44,13,255) 100%) 0 50%;
 }
 
 .header__container{
@@ -86,9 +85,6 @@ img{
   text-decoration: none;
 }
 
-.nav-menu__link:active{
-  text-decoration: underline;
-}
 
 .header__title{
   position: absolute;
@@ -100,17 +96,7 @@ img{
   font-size: 3.6rem;
   font-family: 'Vujahday Script', cursive;
   color: #298d07;
-  background: linear-gradient(
-    to right, 
-    #c8beff 0%, 
-    #dea8f8 10%, 
-    #a8deff 30%,
-    #bdfacd 42%, 
-    #f3fabd 58%, 
-    #fae3db 70%, 
-    #f8acab 95%, 
-    #feaad4 100%
-  );
+  background: rgb(255, 255, 255);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
@@ -137,6 +123,9 @@ img{
 
 .nav-menu__link{
   cursor: pointer;
+  padding: 1em;
+  border-radius: 5em;
+  background: linear-gradient(45deg, rgb(13, 143, 250) 30%, rgb(9, 83, 241) 100%);
 }
 }
 
@@ -166,13 +155,14 @@ img{
 }
 
 .about__title, .about__text{
-  background: linear-gradient(90deg,#e73936, #40A7F5, #5DFCA4);
+  background: linear-gradient(10deg, rgb(22,111,255) 20%, rgb(39,6,207) 45%, rgb(3,19,237) 65%, rgb(7,70,183) 80%, rgb(44,13,255) 100%) 0 50%;
   font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
 
 .designs{
+  
   overflow: hidden;
   text-align: center;
   margin: 0 auto;
@@ -241,9 +231,6 @@ img{
     background-color: rgba(141, 140, 140, .3)
 }
 
-.nav-menu__link:active{
-  text-decoration: underline;
-}
 
 @media screen and (min-width: 768px){
 .designs{
@@ -277,7 +264,7 @@ img{
   padding-top: 5em;
   padding-bottom: 5em;
   justify-items: center;
-  background-color: #eeeeee;
+  background: linear-gradient(10deg, rgb(22,111,255) 20%, rgb(39,6,207) 45%, rgb(3,19,237) 65%, rgb(7,70,183) 80%, rgb(44,13,255) 100%) 0 50%;
   font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
 }
 
@@ -300,7 +287,7 @@ img{
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: 500;
-  color: #3c6de9;
+  color: #fff;
 }
 
 .nav-footer__links, .footer-contact__links{
@@ -313,6 +300,7 @@ img{
 
 .footer-contact__title{
   font-size: 2.2rem;
+  color: #fff;
 }
 
 .footer-contact__ul{
@@ -326,13 +314,11 @@ img{
 }
 
 .footer-contact__instagram{
-  background: linear-gradient(20deg, #F58529, #FEDA77, #DD2A7B, #8134AF, #515BD4);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  color: #fff ;
 }
 
 .footer-contact__facebook{
-  color: #2D4EA2;
+  color: #fff;
 }
 
 @media screen and (min-width: 1440px){
@@ -348,8 +334,7 @@ img{
     background-color: rgba(141, 140, 140, .3)
   }
   .nav-menu__link:hover{
-    text-decoration: underline;
-    color: rgb(233, 67, 67);
+      background: linear-gradient(45deg, rgba(13, 143, 250, .5) 30%, rgba(9, 82, 241, .7) 100%);
   }
   .nav-footer__links:hover{
     text-decoration: underline;
